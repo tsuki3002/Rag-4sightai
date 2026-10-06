@@ -1,0 +1,13 @@
+.venv/
+.env
+storage/
+__pycache__/
+*.pyc
+
+# downloaded third-party course material: regenerate with `python -m scripts.fetch_sources --all`
+data/courses/*/web/
+
+# local / OS noise
+.DS_Store
+*.log
+*.db

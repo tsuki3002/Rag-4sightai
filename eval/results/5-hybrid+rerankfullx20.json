@@ -1,0 +1,139 @@
+{
+  "label": "5-hybrid+rerankfullx20",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "rerank_candidates": 20,
+    "rerank_max_words": 400,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -1000.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.9615384615384616,
+    "hit@k": 1.0,
+    "mrr": 0.9786324786324786,
+    "off_topic_rejected": 0.0,
+    "latency_ms_median": 1555,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        -4.43,
+        -2.905,
+        -1.662,
+        -0.221,
+        -0.101
+      ],
+      "off_topic_top_scores_highest5": [
+        -10.445,
+        -10.311,
+        -9.684,
+        -9.144,
+        -8.178
+      ]
+    },
+    "misses": [],
+    "low_rank": [
+      {
+        "q": "what does a JOIN do in SQL?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": -1.662003517150879,
+        "top": [
+          "-1.662 pandas (software) | Functionality",
+          "-4.461 SQL | Procedural extensions",
+          "-4.582 SQL | SQL"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.5611238479614258,
+        "top": [
+          "1.561 Artificial intelligence | Logic",
+          "-0.272 Artificial intelligence | Logic",
+          "-1.416 Knowledge representation and reasoning | Characteristics"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 2,
+        "top_score": -0.1011137068271637,
+        "top": [
+          "-0.101 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "-0.944 Large language model | Attention mechanism and context window",
+          "-1.835 Artificial intelligence | GPT"
+        ]
+      }
+    ],
+    "off_topic_leaks": [
+      {
+        "q": "who won the 2018 football world cup?",
+        "rejected": false,
+        "top": [
+          "-8.178 Large language model",
+          "-9.870 Artificial intelligence"
+        ]
+      },
+      {
+        "q": "best recipe for chocolate cake",
+        "rejected": false,
+        "top": [
+          "-10.820 Introduction to Modern Statistics: Inference comparing two independent means",
+          "-10.924 Gradient descent"
+        ]
+      },
+      {
+        "q": "what is the capital of Australia?",
+        "rejected": false,
+        "top": [
+          "-10.557 Artificial intelligence",
+          "-10.624 Ethics of artificial intelligence"
+        ]
+      },
+      {
+        "q": "how do I fix a flat bicycle tyre?",
+        "rejected": false,
+        "top": [
+          "-10.445 Dive into Deep Learning: Gradient Descent",
+          "-10.588 Dive into Deep Learning: Linear Regression"
+        ]
+      },
+      {
+        "q": "what was Taylor Swift's first album?",
+        "rejected": false,
+        "top": [
+          "-9.144 Ethics of artificial intelligence",
+          "-10.820 k-means clustering"
+        ]
+      },
+      {
+        "q": "what's the weather in Paris tomorrow?",
+        "rejected": false,
+        "top": [
+          "-10.500 Artificial intelligence",
+          "-10.565 Artificial intelligence"
+        ]
+      },
+      {
+        "q": "how do I file my income taxes?",
+        "rejected": false,
+        "top": [
+          "-9.684 Introduction to Modern Statistics: Exploring numerical data",
+          "-10.341 Introduction to Modern Statistics: Linear regression with multiple predictors"
+        ]
+      },
+      {
+        "q": "translate good morning into Spanish",
+        "rejected": false,
+        "top": [
+          "-10.311 Dive into Deep Learning: The Transformer Architecture",
+          "-10.660 Dive into Deep Learning: The Transformer Architecture"
+        ]
+      }
+    ]
+  }
+}

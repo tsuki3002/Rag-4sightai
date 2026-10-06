@@ -1,0 +1,118 @@
+{
+  "label": "2-hybrid",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "",
+    "rerank_candidates": 12,
+    "rerank_max_words": 128,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -1000.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.8974358974358975,
+    "hit@k": 0.9615384615384616,
+    "mrr": 0.9294871794871795,
+    "off_topic_rejected": 1.0,
+    "latency_ms_median": 49,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        0.03,
+        0.031,
+        0.031,
+        0.031,
+        0.031
+      ],
+      "off_topic_top_scores_highest5": [
+        0.028,
+        0.03,
+        0.031,
+        0.032,
+        0.033
+      ]
+    },
+    "misses": [
+      {
+        "q": "what is the F1 score?",
+        "course": "ml",
+        "rank": null,
+        "top_score": null,
+        "top": []
+      },
+      {
+        "q": "iloc",
+        "course": "data-analytics",
+        "rank": null,
+        "top_score": null,
+        "top": []
+      },
+      {
+        "q": "frame problem",
+        "course": "ai",
+        "rank": null,
+        "top_score": null,
+        "top": []
+      }
+    ],
+    "low_rank": [
+      {
+        "q": "what is a confounding variable?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": 0.03177805800756621,
+        "top": [
+          "0.032 Introduction to Modern Statistics: Exploring categorical data | 4.8 Exercises",
+          "0.032 Introduction to Modern Statistics: Hello data | 1.2.5 Observational studies and experiments",
+          "0.031 Introduction to Modern Statistics: Study design | 2.3 Observational studies"
+        ]
+      },
+      {
+        "q": "who came up with exploratory data analysis?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": 0.03177805800756621,
+        "top": [
+          "0.032 Data and information visualization | History",
+          "0.031 Exploratory data analysis | Exploratory data analysis",
+          "0.031 Exploratory data analysis | Overview"
+        ]
+      },
+      {
+        "q": "IQR",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": 0.03278688524590164,
+        "top": [
+          "0.033 Diagram: box plot vs normal distribution | ",
+          "0.032 Introduction to Modern Statistics: Exploring numerical data | 5.5 Box plots, quartiles, and the median",
+          "0.032 Introduction to Modern Statistics: Exploring numerical data | 5.6 Robust statistics"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 2,
+        "top_score": 0.03131881575727918,
+        "top": [
+          "0.031 Artificial intelligence | Logic",
+          "0.031 Knowledge representation and reasoning | Overview",
+          "0.031 Artificial intelligence | Logic"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 2,
+        "top_score": 0.03252247488101534,
+        "top": [
+          "0.033 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "0.016 Large language model | Attention mechanism and context window",
+          "0.016 Dive into Deep Learning: BERT | 15.8.7. Summary"
+        ]
+      }
+    ],
+    "off_topic_leaks": []
+  }
+}

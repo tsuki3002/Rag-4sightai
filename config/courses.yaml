@@ -1,0 +1,84 @@
+# Course registry.
+#
+# To add a course:
+#   1. add an entry below
+#   2. put local documents (pdf, md, txt, docx, pptx, html, png/jpg...) in its `docs_dir`, and/or
+#      list web documents under `sources` (a URL string, or {url, title, license})
+#   3. python -m scripts.fetch_sources --course <id>    # downloads `sources` into <docs_dir>/web/
+#      python -m scripts.ingest --course <id>           # indexes everything in docs_dir
+#
+# Only add sources whose license allows reuse (Creative Commons, public domain, or your own material).
+# Wikimedia diagrams link to upload.wikimedia.org PNG renders (Special: pages are disallowed by robots.txt).
+
+courses:
+  - id: ai
+    name: Artificial Intelligence
+    description: Foundations of AI, agents, search, reinforcement learning, transformers and LLMs.
+    docs_dir: data/courses/ai
+    sources:
+      - {url: https://en.wikipedia.org/wiki/Artificial_intelligence, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Intelligent_agent, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/A*_search_algorithm, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Reinforcement_learning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Large_language_model, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture), license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Retrieval-augmented_generation, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence, license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/queries-keys-values.html, title: "Dive into Deep Learning: Queries, Keys, and Values", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html, title: "Dive into Deep Learning: The Transformer Architecture", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_natural-language-processing-pretraining/bert.html, title: "Dive into Deep Learning: BERT", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_reinforcement-learning/mdp.html, title: "Dive into Deep Learning: Markov Decision Processes", license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/960px-Colored_neural_network.svg.png, title: "Diagram: artificial neural network layers", license: CC BY-SA 3.0}
+
+  - id: ml
+    name: Machine Learning
+    description: Supervised and unsupervised learning, model evaluation, classic algorithms and neural networks.
+    docs_dir: data/courses/ml
+    sources:
+      - {url: https://en.wikipedia.org/wiki/Machine_learning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Supervised_learning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Unsupervised_learning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Overfitting, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Cross-validation_(statistics), license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Decision_tree_learning, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Random_forest, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Support_vector_machine, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/K-means_clustering, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Gradient_descent, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Precision_and_recall, license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_linear-regression/linear-regression.html, title: "Dive into Deep Learning: Linear Regression", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_linear-classification/softmax-regression.html, title: "Dive into Deep Learning: Softmax Regression", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_multilayer-perceptrons/mlp.html, title: "Dive into Deep Learning: Multilayer Perceptrons", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_multilayer-perceptrons/generalization-deep.html, title: "Dive into Deep Learning: Generalization in Deep Learning", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_optimization/gd.html, title: "Dive into Deep Learning: Gradient Descent", license: CC BY-SA 4.0}
+      - {url: https://d2l.ai/chapter_convolutional-neural-networks/why-conv.html, title: "Dive into Deep Learning: From Fully Connected Layers to Convolutions", license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Precisionrecall.svg/960px-Precisionrecall.svg.png, title: "Diagram: precision and recall", license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/960px-Overfitting.svg.png, title: "Diagram: overfitting", license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Kernel_Machine.svg/960px-Kernel_Machine.svg.png, title: "Diagram: SVM kernel trick", license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Gradient_descent.svg/960px-Gradient_descent.svg.png, title: "Diagram: gradient descent", license: Public domain}
+
+  - id: data-analytics
+    name: Data Analytics
+    description: Data collection, exploratory analysis, visualisation, regression and statistical inference.
+    docs_dir: data/courses/data-analytics
+    sources:
+      - {url: https://openintro-ims.netlify.app/data-hello.html, title: "Introduction to Modern Statistics: Hello data", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/data-design.html, title: "Introduction to Modern Statistics: Study design", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/explore-categorical.html, title: "Introduction to Modern Statistics: Exploring categorical data", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/explore-numerical.html, title: "Introduction to Modern Statistics: Exploring numerical data", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/model-slr.html, title: "Introduction to Modern Statistics: Linear regression with a single predictor", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/model-mlr.html, title: "Introduction to Modern Statistics: Linear regression with multiple predictors", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/foundations-randomization.html, title: "Introduction to Modern Statistics: Hypothesis testing with randomization", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/foundations-errors.html, title: "Introduction to Modern Statistics: Decision errors", license: CC BY-SA 3.0}
+      - {url: https://openintro-ims.netlify.app/inference-two-means.html, title: "Introduction to Modern Statistics: Inference comparing two independent means", license: CC BY-SA 3.0}
+      - {url: https://en.wikipedia.org/wiki/Data_analysis, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Exploratory_data_analysis, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Descriptive_statistics, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Data_cleansing, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Data_and_information_visualization, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/SQL, license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Pandas_(software), license: CC BY-SA 4.0}
+      - {url: https://en.wikipedia.org/wiki/Statistical_hypothesis_test, license: CC BY-SA 4.0}
+      - {url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boxplot_vs_PDF.svg/960px-Boxplot_vs_PDF.svg.png, title: "Diagram: box plot vs normal distribution", license: CC BY-SA 2.5}

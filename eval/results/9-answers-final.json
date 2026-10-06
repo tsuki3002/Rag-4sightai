@@ -1,0 +1,146 @@
+{
+  "label": "9-answers-final",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "rerank_candidates": 12,
+    "rerank_max_words": 128,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -7.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.9487179487179487,
+    "hit@k": 1.0,
+    "mrr": 0.9722222222222222,
+    "off_topic_rejected": 1.0,
+    "latency_ms_median": 325,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        -5.798,
+        -2.905,
+        -1.723,
+        0.283,
+        0.358
+      ],
+      "off_topic_top_scores_highest5": [
+        -10.61,
+        -10.564,
+        -9.684,
+        -9.144,
+        -8.178
+      ]
+    },
+    "misses": [],
+    "low_rank": [
+      {
+        "q": "what is stochastic gradient descent?",
+        "course": "ml",
+        "rank": 2,
+        "top_score": 5.131107807159424,
+        "top": [
+          "5.131 Dive into Deep Learning: Linear Regression | 3.1.1.4. Minibatch Stochastic Gradient Descent",
+          "5.128 Gradient descent | Momentum or *heavy ball* method",
+          "4.925 Gradient descent | Gradient descent"
+        ]
+      },
+      {
+        "q": "what does a JOIN do in SQL?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": -1.72304368019104,
+        "top": [
+          "-1.723 pandas (software) | Functionality",
+          "-4.492 SQL | Procedural extensions",
+          "-4.766 SQL | Syntax"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.6104021072387695,
+        "top": [
+          "1.610 Artificial intelligence | Logic",
+          "-0.462 Artificial intelligence | Logic",
+          "-2.554 Knowledge representation and reasoning | Overview"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 2,
+        "top_score": 0.3581588864326477,
+        "top": [
+          "0.358 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "-0.802 Large language model | Attention mechanism and context window",
+          "-1.878 Artificial intelligence | GPT"
+        ]
+      }
+    ],
+    "off_topic_leaks": []
+  },
+  "answers": {
+    "answer_cites_expected": 1.0,
+    "answer_wrongly_not_found": 0.0,
+    "off_topic_declined": 1.0,
+    "follow_up_cites_expected": 1.0,
+    "answer_failures": [],
+    "off_topic_answered": [],
+    "follow_ups": [
+      {
+        "turns": [
+          "what is precision?",
+          "and what about recall?"
+        ],
+        "search_query": "and what about recall?",
+        "ok": true,
+        "cited": [
+          "Precision and recall",
+          "Precision and recall",
+          "Diagram: precision and recall"
+        ]
+      },
+      {
+        "turns": [
+          "explain k-means clustering",
+          "how do I pick the number of clusters for it?"
+        ],
+        "search_query": "How do I pick the number of clusters for k‑means clustering?",
+        "ok": true,
+        "cited": [
+          "k-means clustering",
+          "k-means clustering"
+        ]
+      },
+      {
+        "turns": [
+          "what is a p-value?",
+          "what threshold do people usually compare it to?"
+        ],
+        "search_query": "What threshold do people usually compare a p‑value to?",
+        "ok": true,
+        "cited": [
+          "Introduction to Modern Statistics: Hypothesis testing with randomization",
+          "Introduction to Modern Statistics: Hypothesis testing with randomization"
+        ]
+      },
+      {
+        "turns": [
+          "what is BERT?",
+          "how is it different from GPT-style models?"
+        ],
+        "search_query": "How is BERT different from GPT‑style models?",
+        "ok": true,
+        "cited": [
+          "Dive into Deep Learning: BERT",
+          "Dive into Deep Learning: BERT",
+          "Large language model",
+          "Large language model"
+        ]
+      }
+    ]
+  }
+}

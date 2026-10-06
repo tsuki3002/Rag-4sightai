@@ -1,0 +1,111 @@
+# Evaluation set. Run:  python -m eval.run            (retrieval only: free, ~1 min)
+#                       python -m eval.run --answers  (full pipeline incl. LLM: uses API quota)
+#
+# expect: a question passes if ANY retrieved/cited doc title contains ANY of these strings (case-insensitive).
+# Phrase questions the way students would, not by copying section headings.
+# Grow this file from real student questions (see storage/logs.db) — especially ones that got bad answers.
+
+questions:
+  # ---------------- AI ----------------
+  - {course: ai, q: "what does it mean for an agent to act rationally?", expect: ["Intelligent agent", "Artificial intelligence"]}
+  - {course: ai, q: "how does A* decide which node to look at next?", expect: ["A* search"]}
+  - {course: ai, q: "what makes a heuristic admissible?", expect: ["A* search"]}
+  - {course: ai, q: "what is the Turing test?", expect: ["Artificial intelligence", "Ethics of artificial intelligence"]}
+  - {course: ai, q: "how do queries keys and values work in attention?", expect: ["Queries, Keys", "Transformer"]}
+  - {course: ai, q: "why do transformers need positional encodings?", expect: ["Transformer"]}
+  - {course: ai, q: "how is BERT pretrained?", expect: ["BERT"]}
+  - {course: ai, q: "what is masked language modelling", expect: ["BERT", "Large language model", "Transformer"]}
+  - {course: ai, q: "what is a Markov decision process?", expect: ["Markov Decision", "Reinforcement learning"]}
+  - {course: ai, q: "explain the explore vs exploit dilemma", expect: ["Reinforcement learning"]}
+  - {course: ai, q: "what is Q-learning?", expect: ["Reinforcement learning"]}
+  - {course: ai, q: "why do LLMs make things up?", expect: ["Large language model", "Retrieval-augmented", "Artificial intelligence"]}
+  - {course: ai, q: "how does RAG help with hallucinations?", expect: ["Retrieval-augmented"]}
+  - {course: ai, q: "what is an ontology?", expect: ["Knowledge representation", "Artificial intelligence"]}
+  - {course: ai, q: "what are the worries about bias and fairness in AI?", expect: ["Ethics of artificial intelligence", "Artificial intelligence"]}
+  - {course: ai, q: "what layers does a basic neural network have?", expect: ["neural network", "Artificial intelligence", "Transformer"]}
+
+  # ---------------- ML ----------------
+  - {course: ml, q: "how can I tell if my model is overfitting?", expect: ["Overfitting", "Generalization", "Bias–variance"]}
+  - {course: ml, q: "explain the bias variance tradeoff", expect: ["Bias–variance"]}
+  - {course: ml, q: "how does k-fold cross validation work?", expect: ["Cross-validation"]}
+  - {course: ml, q: "how does a decision tree pick where to split?", expect: ["Decision tree"]}
+  - {course: ml, q: "what is bagging and why does it help random forests?", expect: ["Random forest", "Decision tree"]}
+  - {course: ml, q: "what is the kernel trick?", expect: ["Support vector machine", "kernel trick"]}
+  - {course: ml, q: "how do I choose the number of clusters in k-means?", expect: ["k-means"]}
+  - {course: ml, q: "what happens if the learning rate is too big?", expect: ["Gradient Descent", "Gradient descent"]}
+  - {course: ml, q: "difference between supervised and unsupervised learning", expect: ["Supervised learning", "Unsupervised learning", "Machine learning"]}
+  - {course: ml, q: "what is the F1 score?", expect: ["Precision and recall"]}
+  - {course: ml, q: "why use softmax for classification?", expect: ["Softmax"]}
+  - {course: ml, q: "what loss do we minimise in linear regression?", expect: ["Linear Regression"]}
+  - {course: ml, q: "why do neural nets need non-linear activations?", expect: ["Multilayer Perceptrons"]}
+  - {course: ml, q: "why are convolutions better than dense layers for images?", expect: ["Convolutions"]}
+  - {course: ml, q: "what is stochastic gradient descent?", expect: ["Gradient Descent", "Gradient descent"]}
+  - {course: ml, q: "what is KeRF?", expect: ["Random forest"]}
+
+  # ---------------- Data analytics ----------------
+  - {course: data-analytics, q: "what is the difference between an observational study and an experiment?", expect: ["Study design", "Hello data"]}
+  - {course: data-analytics, q: "what is a confounding variable?", expect: ["Study design", "Hello data", "Data analysis"]}
+  - {course: data-analytics, q: "how do I read a box plot?", expect: ["numerical data", "box plot"]}
+  - {course: data-analytics, q: "when is the median better than the mean?", expect: ["numerical data", "Descriptive statistics"]}
+  - {course: data-analytics, q: "what is a contingency table?", expect: ["categorical data", "Hello data", "Descriptive statistics"]}
+  - {course: data-analytics, q: "what is a type 1 error?", expect: ["Decision errors", "Statistical hypothesis test"]}
+  - {course: data-analytics, q: "what does a p-value actually tell me?", expect: ["Hypothesis testing", "Statistical hypothesis test", "Decision errors"]}
+  - {course: data-analytics, q: "how do I interpret the slope of a regression line?", expect: ["single predictor", "multiple predictors"]}
+  - {course: data-analytics, q: "what does R squared mean?", expect: ["single predictor", "multiple predictors"]}
+  - {course: data-analytics, q: "what is multicollinearity?", expect: ["multiple predictors"]}
+  - {course: data-analytics, q: "who came up with exploratory data analysis?", expect: ["Exploratory data analysis", "Data analysis"]}
+  - {course: data-analytics, q: "how should I deal with dirty or missing data?", expect: ["Data cleansing", "Data analysis"]}
+  - {course: data-analytics, q: "what does a JOIN do in SQL?", expect: ["SQL"]}
+  - {course: data-analytics, q: "what is a pandas DataFrame?", expect: ["pandas"]}
+  - {course: data-analytics, q: "how do I compare the averages of two groups?", expect: ["two independent means"]}
+  - {course: data-analytics, q: "what makes a chart effective?", expect: ["visualization"]}
+
+  # ---------------- Hard: bare keywords, acronyms, exact terms, paraphrases ----------------
+  - {course: ml, q: "ReLU", expect: ["Multilayer Perceptrons"]}
+  - {course: ml, q: "hinge loss", expect: ["Support vector machine"]}
+  - {course: ml, q: "LOOCV", expect: ["Cross-validation"]}
+  - {course: ml, q: "what's out-of-bag error?", expect: ["Random forest"]}
+  - {course: ml, q: "k-means++ initialisation", expect: ["k-means"]}
+  - {course: ml, q: "information gain", expect: ["Decision tree"]}
+  - {course: ml, q: "weight decay", expect: ["Generalization in Deep Learning"]}
+  - {course: ml, q: "momentum", expect: ["Gradient"]}
+  - {course: ml, q: "cross-entropy loss", expect: ["Softmax"]}
+  - {course: ml, q: "one-hot labels", expect: ["Softmax"]}
+  - {course: ml, q: "my model is great on training data but terrible on new data, why?", expect: ["Overfitting", "Generalization", "Bias–variance"]}
+  - {course: ml, q: "how do I know when to stop training?", expect: ["Generalization", "Overfitting", "Supervised learning"]}
+  - {course: data-analytics, q: "IQR", expect: ["numerical data", "categorical data"]}
+  - {course: data-analytics, q: "iloc", expect: ["pandas"]}
+  - {course: data-analytics, q: "Simpson's paradox", expect: ["categorical data"]}
+  - {course: data-analytics, q: "blocking", expect: ["Study design"]}
+  - {course: data-analytics, q: "placebo", expect: ["Study design", "Hello data"]}
+  - {course: data-analytics, q: "null hypothesis", expect: ["Hypothesis testing", "Statistical hypothesis test", "Decision errors", "two independent means"]}
+  - {course: data-analytics, q: "residual plot", expect: ["single predictor", "multiple predictors"]}
+  - {course: data-analytics, q: "my data has a few weird extreme values, what should I do with them?", expect: ["Data analysis", "Exploratory data analysis", "numerical data", "Data cleansing", "visualization"]}
+  - {course: data-analytics, q: "how do I show how two numeric variables relate?", expect: ["Hello data", "visualization", "Exploratory data analysis", "single predictor", "multiple predictors"]}
+  - {course: ai, q: "Bellman equation", expect: ["Markov Decision", "Reinforcement learning"]}
+  - {course: ai, q: "discount factor", expect: ["Markov Decision"]}
+  - {course: ai, q: "multi-head attention", expect: ["Transformer"]}
+  - {course: ai, q: "RLHF", expect: ["Large language model", "Reinforcement learning", "Artificial intelligence"]}
+  - {course: ai, q: "Dijkstra vs A*", expect: ["A* search"]}
+  - {course: ai, q: "frame problem", expect: ["Knowledge representation", "Artificial intelligence"]}
+  - {course: ai, q: "description logic", expect: ["Knowledge representation"]}
+  - {course: ai, q: "how do chatbots learn to follow instructions from people's ratings?", expect: ["Large language model", "Reinforcement learning", "Artificial intelligence"]}
+  - {course: ai, q: "how does a model figure out which words in a sentence relate to each other?", expect: ["Transformer", "Queries, Keys", "Large language model"]}
+
+# Must be answered with "couldn't find this in the course materials" (searched across all courses).
+off_topic:
+  - "who won the 2018 football world cup?"
+  - "best recipe for chocolate cake"
+  - "what is the capital of Australia?"
+  - "how do I fix a flat bicycle tyre?"
+  - "what was Taylor Swift's first album?"
+  - "what's the weather in Paris tomorrow?"
+  - "how do I file my income taxes?"
+  - "translate good morning into Spanish"
+
+# Multi-turn: the last question only makes sense with the earlier turns (only used with --answers).
+follow_ups:
+  - {course: ml, turns: ["what is precision?", "and what about recall?"], expect: ["Precision and recall"]}
+  - {course: ml, turns: ["explain k-means clustering", "how do I pick the number of clusters for it?"], expect: ["k-means"]}
+  - {course: data-analytics, turns: ["what is a p-value?", "what threshold do people usually compare it to?"], expect: ["Hypothesis testing", "Statistical hypothesis test", "Decision errors"]}
+  - {course: ai, turns: ["what is BERT?", "how is it different from GPT-style models?"], expect: ["BERT", "Large language model", "Transformer"]}

@@ -1,0 +1,85 @@
+{
+  "label": "8-final-defaults",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "rerank_candidates": 12,
+    "rerank_max_words": 128,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -7.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.9487179487179487,
+    "hit@k": 1.0,
+    "mrr": 0.9722222222222222,
+    "off_topic_rejected": 1.0,
+    "latency_ms_median": 454,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        -5.798,
+        -2.905,
+        -1.723,
+        0.283,
+        0.358
+      ],
+      "off_topic_top_scores_highest5": [
+        -10.61,
+        -10.564,
+        -9.684,
+        -9.144,
+        -8.178
+      ]
+    },
+    "misses": [],
+    "low_rank": [
+      {
+        "q": "what is stochastic gradient descent?",
+        "course": "ml",
+        "rank": 2,
+        "top_score": 5.131107807159424,
+        "top": [
+          "5.131 Dive into Deep Learning: Linear Regression | 3.1.1.4. Minibatch Stochastic Gradient Descent",
+          "5.128 Gradient descent | Momentum or *heavy ball* method",
+          "4.925 Gradient descent | Gradient descent"
+        ]
+      },
+      {
+        "q": "what does a JOIN do in SQL?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": -1.72304368019104,
+        "top": [
+          "-1.723 pandas (software) | Functionality",
+          "-4.492 SQL | Procedural extensions",
+          "-4.766 SQL | Syntax"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.6104021072387695,
+        "top": [
+          "1.610 Artificial intelligence | Logic",
+          "-0.462 Artificial intelligence | Logic",
+          "-2.554 Knowledge representation and reasoning | Overview"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 2,
+        "top_score": 0.3581588864326477,
+        "top": [
+          "0.358 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "-0.802 Large language model | Attention mechanism and context window",
+          "-1.878 Artificial intelligence | GPT"
+        ]
+      }
+    ],
+    "off_topic_leaks": []
+  }
+}

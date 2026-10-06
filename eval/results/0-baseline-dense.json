@@ -1,0 +1,108 @@
+{
+  "label": "0-baseline-dense",
+  "config": {
+    "top_k": 5,
+    "min_score": 0.62,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.8717948717948718,
+    "hit@k": 0.9487179487179487,
+    "mrr": 0.9027777777777778,
+    "off_topic_rejected": 1.0,
+    "latency_ms_median": 13,
+    "misses": [
+      {
+        "q": "what is the F1 score?",
+        "course": "ml",
+        "rank": null,
+        "top": []
+      },
+      {
+        "q": "iloc",
+        "course": "data-analytics",
+        "rank": null,
+        "top": []
+      },
+      {
+        "q": "frame problem",
+        "course": "ai",
+        "rank": null,
+        "top": []
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": null,
+        "top": [
+          "0.751 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction¶",
+          "0.748 Large language model | Attention mechanism and context window",
+          "0.735 Large language model | Interpretation"
+        ]
+      }
+    ],
+    "low_rank": [
+      {
+        "q": "what is a confounding variable?",
+        "course": "data-analytics",
+        "rank": 3,
+        "top": [
+          "0.730 Introduction to Modern Statistics: Exploring categorical data | 4.8 Exercises",
+          "0.719 Introduction to Modern Statistics: Linear regression with multiple predictors | Introduction to Modern Statistics: Linear regression with multiple predictors",
+          "0.706 Introduction to Modern Statistics: Study design | 2.2.1 Principles of experimental design"
+        ]
+      },
+      {
+        "q": "my model is great on training data but terrible on new data, why?",
+        "course": "ml",
+        "rank": 4,
+        "top": [
+          "0.712 Machine learning | Training models",
+          "0.705 Supervised learning | Noise in the output values",
+          "0.693 Machine learning | Software"
+        ]
+      },
+      {
+        "q": "IQR",
+        "course": "data-analytics",
+        "rank": 2,
+        "top": [
+          "0.665 Diagram: box plot vs normal distribution | ",
+          "0.639 Introduction to Modern Statistics: Exploring numerical data | 5.5 Box plots, quartiles, and the median",
+          "0.631 Introduction to Modern Statistics: Exploring numerical data | 5.6 Robust statistics"
+        ]
+      },
+      {
+        "q": "how do I show how two numeric variables relate?",
+        "course": "data-analytics",
+        "rank": 3,
+        "top": [
+          "0.753 Introduction to Modern Statistics: Exploring numerical data | 5.9.1 Summary",
+          "0.736 Introduction to Modern Statistics: Exploring categorical data | 4.2 Visualizing two categorical variables",
+          "0.732 Introduction to Modern Statistics: Hello data | 1.4 Exercises"
+        ]
+      },
+      {
+        "q": "RLHF",
+        "course": "ai",
+        "rank": 2,
+        "top": [
+          "0.645 Dive into Deep Learning: The Transformer Architecture | 11.7.6. Training¶",
+          "0.632 Large language model | Fine-tuning",
+          "0.625 Reinforcement learning | In natural language processing"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 2,
+        "top": [
+          "0.745 Artificial intelligence | Logic",
+          "0.742 Knowledge representation and reasoning | Overview",
+          "0.730 Knowledge representation and reasoning | Characteristics"
+        ]
+      }
+    ],
+    "off_topic_leaks": []
+  }
+}

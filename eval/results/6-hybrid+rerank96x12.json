@@ -1,0 +1,162 @@
+{
+  "label": "6-hybrid+rerank96x12",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "rerank_candidates": 12,
+    "rerank_max_words": 96,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -1000.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.9358974358974359,
+    "hit@k": 0.9871794871794872,
+    "mrr": 0.9572649572649573,
+    "off_topic_rejected": 0.0,
+    "latency_ms_median": 388,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        -11.13,
+        -5.966,
+        -2.905,
+        -2.485,
+        -1.538
+      ],
+      "off_topic_top_scores_highest5": [
+        -10.707,
+        -10.699,
+        -9.808,
+        -9.383,
+        -8.178
+      ]
+    },
+    "misses": [
+      {
+        "q": "Simpson's paradox",
+        "course": "data-analytics",
+        "rank": null,
+        "top_score": -11.130402565002441,
+        "top": [
+          "-11.130 Statistical hypothesis test | Philosophy",
+          "-11.260 Statistical hypothesis test | Tailedness of the null-hypothesis test",
+          "-11.297 Introduction to Modern Statistics: Hypothesis testing with randomization | 11.5 Exercises"
+        ]
+      }
+    ],
+    "low_rank": [
+      {
+        "q": "what is stochastic gradient descent?",
+        "course": "ml",
+        "rank": 2,
+        "top_score": 4.932228088378906,
+        "top": [
+          "4.932 Dive into Deep Learning: Linear Regression | 3.1.1.4. Minibatch Stochastic Gradient Descent",
+          "4.762 Gradient descent | Gradient descent",
+          "3.984 Dive into Deep Learning: Gradient Descent | 12.3. Gradient Descent¶  Open the notebook in SageMaker Studio Lab"
+        ]
+      },
+      {
+        "q": "what does a JOIN do in SQL?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": -2.485413074493408,
+        "top": [
+          "-2.485 pandas (software) | Functionality",
+          "-4.869 SQL | Procedural extensions",
+          "-4.972 SQL | Design"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.4558508396148682,
+        "top": [
+          "1.456 Artificial intelligence | Logic",
+          "0.170 Artificial intelligence | Logic",
+          "-3.148 Knowledge representation and reasoning | History"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 0.5698872804641724,
+        "top": [
+          "0.570 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "-1.663 Artificial intelligence | GPT",
+          "-3.279 Large language model | Attention mechanism and context window"
+        ]
+      }
+    ],
+    "off_topic_leaks": [
+      {
+        "q": "who won the 2018 football world cup?",
+        "rejected": false,
+        "top": [
+          "-8.178 Large language model",
+          "-10.909 Artificial intelligence"
+        ]
+      },
+      {
+        "q": "best recipe for chocolate cake",
+        "rejected": false,
+        "top": [
+          "-10.964 Gradient descent",
+          "-10.985 Dive into Deep Learning: BERT"
+        ]
+      },
+      {
+        "q": "what is the capital of Australia?",
+        "rejected": false,
+        "top": [
+          "-10.975 pandas (software)",
+          "-11.068 Introduction to Modern Statistics: Linear regression with a single predictor"
+        ]
+      },
+      {
+        "q": "how do I fix a flat bicycle tyre?",
+        "rejected": false,
+        "top": [
+          "-10.699 Dive into Deep Learning: Linear Regression",
+          "-11.163 Dive into Deep Learning: Gradient Descent"
+        ]
+      },
+      {
+        "q": "what was Taylor Swift's first album?",
+        "rejected": false,
+        "top": [
+          "-9.383 Ethics of artificial intelligence",
+          "-10.830 k-means clustering"
+        ]
+      },
+      {
+        "q": "what's the weather in Paris tomorrow?",
+        "rejected": false,
+        "top": [
+          "-10.851 Ethics of artificial intelligence",
+          "-11.152 Cross-validation (statistics)"
+        ]
+      },
+      {
+        "q": "how do I file my income taxes?",
+        "rejected": false,
+        "top": [
+          "-9.808 Introduction to Modern Statistics: Exploring numerical data",
+          "-10.910 Introduction to Modern Statistics: Linear regression with a single predictor"
+        ]
+      },
+      {
+        "q": "translate good morning into Spanish",
+        "rejected": false,
+        "top": [
+          "-10.707 Dive into Deep Learning: The Transformer Architecture",
+          "-11.133 Dive into Deep Learning: The Transformer Architecture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "label": "7-hybrid+jina128x12",
+  "config": {
+    "search_mode": "hybrid",
+    "rerank_model": "jinaai/jina-reranker-v1-tiny-en",
+    "rerank_candidates": 12,
+    "rerank_max_words": 128,
+    "max_chunks_per_doc": 2,
+    "top_k": 5,
+    "min_score": 0.62,
+    "min_rerank_score": -1000.0,
+    "llm_model": "openai/gpt-oss-120b"
+  },
+  "retrieval": {
+    "hit@1": 0.9230769230769231,
+    "hit@k": 1.0,
+    "mrr": 0.9529914529914529,
+    "off_topic_rejected": 0.0,
+    "latency_ms_median": 399,
+    "calibration": {
+      "answerable_top_scores_lowest5": [
+        0.082,
+        0.24,
+        0.471,
+        0.538,
+        0.669
+      ],
+      "off_topic_top_scores_highest5": [
+        -1.07,
+        -1.027,
+        -0.954,
+        -0.742,
+        -0.612
+      ]
+    },
+    "misses": [],
+    "low_rank": [
+      {
+        "q": "what is Q-learning?",
+        "course": "ai",
+        "rank": 2,
+        "top_score": 0.6693260669708252,
+        "top": [
+          "0.669 Artificial intelligence | Learning",
+          "0.342 Reinforcement learning | Function approximation methods",
+          "-0.129 Reinforcement learning | Partially supervised RL (PSRL)"
+        ]
+      },
+      {
+        "q": "why do neural nets need non-linear activations?",
+        "course": "ml",
+        "rank": 3,
+        "top_score": 0.8401734828948975,
+        "top": [
+          "0.840 Unsupervised learning | Specific networks",
+          "0.581 Unsupervised learning | Specific networks",
+          "0.565 Dive into Deep Learning: Multilayer Perceptrons | 5.1.2. Activation Functions"
+        ]
+      },
+      {
+        "q": "my model is great on training data but terrible on new data, why?",
+        "course": "ml",
+        "rank": 3,
+        "top_score": 1.4786455631256104,
+        "top": [
+          "1.479 Machine learning | Training models",
+          "0.817 Supervised learning | Noise in the output values",
+          "0.774 Dive into Deep Learning: Generalization in Deep Learning | 5.5.1. Revisiting Overfitting and Regularization"
+        ]
+      },
+      {
+        "q": "how do I show how two numeric variables relate?",
+        "course": "data-analytics",
+        "rank": 2,
+        "top_score": 1.0549254417419434,
+        "top": [
+          "1.055 Introduction to Modern Statistics: Exploring numerical data | 5.9.1 Summary",
+          "0.825 Introduction to Modern Statistics: Hello data | 1.2.3 Relationships between variables",
+          "0.384 Introduction to Modern Statistics: Exploring categorical data | 4.6 Comparing numerical data across groups"
+        ]
+      },
+      {
+        "q": "description logic",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.961590051651001,
+        "top": [
+          "1.962 Artificial intelligence | Logic",
+          "1.441 Artificial intelligence | Logic",
+          "0.278 Knowledge representation and reasoning | History"
+        ]
+      },
+      {
+        "q": "how does a model figure out which words in a sentence relate to each other?",
+        "course": "ai",
+        "rank": 3,
+        "top_score": 1.5126227140426636,
+        "top": [
+          "1.513 Artificial intelligence | GPT",
+          "1.284 Dive into Deep Learning: BERT | 15.8.5.2. Next Sentence Prediction",
+          "0.734 Large language model | Attention mechanism and context window"
+        ]
+      }
+    ],
+    "off_topic_leaks": [
+      {
+        "q": "who won the 2018 football world cup?",
+        "rejected": false,
+        "top": [
+          "-1.027 Large language model",
+          "-1.075 Artificial intelligence"
+        ]
+      },
+      {
+        "q": "best recipe for chocolate cake",
+        "rejected": false,
+        "top": [
+          "-1.149 Introduction to Modern Statistics: Inference comparing two independent means",
+          "-1.274 Random forest"
+        ]
+      },
+      {
+        "q": "what is the capital of Australia?",
+        "rejected": false,
+        "top": [
+          "-0.954 Ethics of artificial intelligence",
+          "-0.961 Artificial intelligence"
+        ]
+      },
+      {
+        "q": "how do I fix a flat bicycle tyre?",
+        "rejected": false,
+        "top": [
+          "-1.070 Dive into Deep Learning: Gradient Descent",
+          "-1.074 Dive into Deep Learning: Linear Regression"
+        ]
+      },
+      {
+        "q": "what was Taylor Swift's first album?",
+        "rejected": false,
+        "top": [
+          "-0.612 Ethics of artificial intelligence",
+          "-1.201 Machine learning"
+        ]
+      },
+      {
+        "q": "what's the weather in Paris tomorrow?",
+        "rejected": false,
+        "top": [
+          "-1.224 Ethics of artificial intelligence",
+          "-1.320 Statistical hypothesis test"
+        ]
+      },
+      {
+        "q": "how do I file my income taxes?",
+        "rejected": false,
+        "top": [
+          "-0.742 Introduction to Modern Statistics: Exploring numerical data",
+          "-0.756 Introduction to Modern Statistics: Linear regression with multiple predictors"
+        ]
+      },
+      {
+        "q": "translate good morning into Spanish",
+        "rejected": false,
+        "top": [
+          "-1.123 Dive into Deep Learning: The Transformer Architecture",
+          "-1.274 Large language model"
+        ]
+      }
+    ]
+  }
+}
